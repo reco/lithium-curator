@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
+// import ReactDOM from "react-dom"
 
 // router
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 // uber base web
 import { Client as Styletron } from 'styletron-engine-atomic';
@@ -24,9 +23,7 @@ import Curator from './pages/Curator/Curator';
 
 import './App.css';
 
-
 const engine = new Styletron();
-
 
 function App() {
   return (
@@ -34,7 +31,7 @@ function App() {
       <StyletronProvider value={engine}>
         <BaseProvider theme={LightTheme}>
           <Router>
-            <Header/>
+            <Header />
             <main>
               <Route path="/dashboard" exact component={Dashboard} />
               <Route path="/pages" exact component={Pages} />

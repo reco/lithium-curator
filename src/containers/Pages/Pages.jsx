@@ -11,8 +11,10 @@ class Pages extends Component {
     const pagesItems = this.props.pages.map(page => (
       <div key={page.id}>
         <h3>{page.title}</h3>
+
         <p>
-          {page.status}, {page.date}, {page.author}
+          {page.status}, {new Date(page.publish_date).toLocaleDateString()},{" "}
+          {page.author}
         </p>
       </div>
     ))

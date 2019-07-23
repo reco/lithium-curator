@@ -1,0 +1,65 @@
+{
+  "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react"],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "globals": {
+    "webpackIsomorphicTools": "readonly",
+    "__HOST__": "readonly",
+    "__API_URL__": "readonly",
+    "__GRAPHQL_URL__": "readonly",
+    "__DEVELOPMENT__": "readonly",
+    "__SERVER__": "readonly"
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["react", "preact"],
+          ["react-dom", "preact-compat"]
+        ],
+        "extensions": [".js", ".jsx", ".json"]
+      },
+      "node": {
+        "paths": ["./src"]
+      }
+    }
+  },
+  "rules": {
+    "jsx-a11y/href-no-hash": ["off"],
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "react/require-default-props": [0],
+    "max-len": [
+      "warn",
+      {
+        "code": 110,
+        "tabWidth": 2,
+        "comments": 110,
+        "ignoreComments": false,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "indent": ["error", 2, {"SwitchCase": 1}],
+    "no-unused-expressions": [
+      "error",
+      { "allowTernary": true, "allowShortCircuit": true, "allowTaggedTemplates": true }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "esm": "never"
+      }
+    ]
+  }
+}
